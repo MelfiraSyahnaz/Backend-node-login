@@ -29,7 +29,7 @@ module.exports = {
             username: req.body.username,
             password: req.body.password,
         }
-        db.query(`insert into user set ?`, user, (err, results) => {
+        db.query(`insert into admin set ?`, admin, (err, results) => {
             let response = null
             if (err) {
                 response = {
@@ -51,7 +51,7 @@ module.exports = {
             password: req.body.password,
             
         }
-        db.query(`update user set ? where id = '${id}'`, user, (err, results) => {
+        db.query(`update admin set ? where id = '${id}'`, admin, (err, results) => {
             let response = null
             if (err) {
                 res.send ({
@@ -67,7 +67,7 @@ module.exports = {
     },
     delete: (req, res) => {
         const id = req.params.id
-        db.query(`delete from user where id = '${id}'`, (err, results) => {
+        db.query(`delete from admin where id = '${id}'`, (err, results) => {
             let response = null
             if (err) {
                 response = {
@@ -82,3 +82,5 @@ module.exports = {
         })
     }
 }
+
+//bdshbh
