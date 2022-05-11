@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2022 at 04:42 PM
+-- Generation Time: May 12, 2022 at 01:12 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -41,6 +41,26 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id_admin`, `nama`, `email`, `password`) VALUES
 (1, 'alex', 'alexander@gmail.com', 'tah00bulat');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `id_cust` int(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `email` varchar(235) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id_cust`, `nama`, `email`, `password`) VALUES
+(1, 'alya', 'galonbaru@gmail.com', 'nastar');
+
 --
 -- Indexes for dumped tables
 --
@@ -52,6 +72,12 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id_cust`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -60,6 +86,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id_admin` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id_cust` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
